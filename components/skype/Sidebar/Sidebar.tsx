@@ -50,7 +50,7 @@ export default function Sidebar() {
         </svg>
       </div>
       <div className="grid grid-cols-4 items-center pl-1">
-        <div className="cursor-pointer px-4 pt-5 pb-2">
+        <div className="cursor-pointer px-4 pt-5 pb-2 flex flex-col items-center">
           <svg
             className="w-6 h-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ export default function Sidebar() {
           </svg>
           <div className="text-xs text-gray-400">Chats</div>
         </div>
-        <div className="cursor-pointer px-4 pt-3 pb-2">
+        <div className="cursor-pointer px-4 pt-3 pb-2 flex flex-col items-center">
           <svg
             className="w-6 h-6 text-gray-500"
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ export default function Sidebar() {
           </svg>
           <div className="text-xs text-gray-400">Calls</div>
         </div>
-        <div className="cursor-pointer px-4 pt-3 pb-2">
+        <div className="cursor-pointer px-4 pt-3 pb-2 flex flex-col items-center">
           <svg
             className="w-6 h-6 text-gray-700"
             xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +95,7 @@ export default function Sidebar() {
           </svg>
           <div className="text-xs text-gray-400">Contacts</div>
         </div>
-        <div className="cursor-pointer px-4 pt-3 pb-2">
+        <div className="cursor-pointer px-4 pt-3 pb-2 flex flex-col items-center">
           <svg
             className="w-6 h-6 text-gray-700"
             xmlns="http://www.w3.org/2000/svg"
