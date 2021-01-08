@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from 'react'
 import {
   BellIcon,
   ChatAltIcon,
@@ -8,9 +9,13 @@ import {
 } from '../Icon'
 import Tab from './Tab'
 
-export default function SidebarToolbox() {
+export type SidebarToolboxProps = {
+  selectedTab: string
+  setSelectedTab: Dispatch<SetStateAction<string>>
+}
+export default function SidebarToolbox(props: SidebarToolboxProps) {
   return (
-    <div className="pt-1 px-2 bg-blue-50 border-b">
+    <div className="py-1 px-2 bg-blue-50 border-b">
       <div className="flex mb mb-2">
         <div className="m-1 mr-3 w-10 h-10 relative flex justify-center items-center rounded-full bg-gray-200">
           <div className="text-sm uppercase text-blue-500 font-bold">bm</div>
@@ -33,11 +38,32 @@ export default function SidebarToolbox() {
         <span className="text-sm text-gray-400">People, groups & messages</span>
         <SelectorIcon className="w-5 h-5 ml-auto border-l" />
       </div>
-      <div className="grid grid-cols-4 items-center pl-1">
-        <Tab title="Chats" icon={ChatAltIcon} />
-        <Tab title="Calls" icon={PhoneIcon} />
-        <Tab title="Contacts" icon={UserGroupIcon} />
-        <Tab title="Notifications" icon={BellIcon} notifNumber={1} />
+      <div className="grid grid-cols-4 items-center pl-0.25">
+        <Tab
+          isActive={props.selectedTab === 'Chats'}
+          onClick={() => props.setSelectedTab('Chats')}
+          title="Chats"
+          icon={ChatAltIcon}
+        />
+        <Tab
+          isActive={props.selectedTab === 'Calls'}
+          onClick={() => props.setSelectedTab('Calls')}
+          title="Calls"
+          icon={PhoneIcon}          
+        />
+        <Tab
+          isActive={props.selectedTab === 'Contacts'}
+          onClick={() => props.setSelectedTab('Contacts')}
+          title="Contacts"
+          icon={UserGroupIcon}
+        />
+        <Tab
+          isActive={props.selectedTab === 'Notifications'}
+          onClick={() => props.setSelectedTab('Notifications')}
+          title="Notifications"
+          icon={BellIcon}
+          notifNumber={1}
+        />
       </div>
     </div>
   )
