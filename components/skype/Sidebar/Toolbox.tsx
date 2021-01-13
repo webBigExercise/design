@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from 'react'
+import { Avatar } from '../Avatar'
 import {
   BellIcon,
   ChatAltIcon,
@@ -15,12 +16,9 @@ export type SidebarToolboxProps = {
 }
 export default function SidebarToolbox(props: SidebarToolboxProps) {
   return (
-    <div className="py-1 px-2 bg-blue-50 border-b">
+    <div className="py-1 border-b">
       <div className="flex mb mb-2">
-        <div className="m-1 mr-3 w-10 h-10 relative flex justify-center items-center rounded-full bg-gray-200">
-          <div className="text-sm uppercase text-blue-500 font-bold">bm</div>
-          <div className="absolute right-0 bottom-0 w-2.5 h-2.5 rounded-full bg-green-400"></div>
-        </div>
+        <Avatar text="bmq928" status="online" />
         <div className="flex items-center">
           <div className="text-sm text-thin mr-2">Bùi Minh Quang</div>
           <div className="text-xs text-gray-500">$0.00</div>
@@ -49,7 +47,7 @@ export default function SidebarToolbox(props: SidebarToolboxProps) {
           isActive={props.selectedTab === 'Calls'}
           onClick={() => props.setSelectedTab('Calls')}
           title="Calls"
-          icon={PhoneIcon}          
+          icon={PhoneIcon}
         />
         <Tab
           isActive={props.selectedTab === 'Contacts'}

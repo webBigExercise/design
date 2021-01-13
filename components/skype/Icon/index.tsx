@@ -4,5 +4,8 @@ export { default as PhoneIcon } from './PhoneIcon'
 export { default as UserGroupIcon } from './UserGroupIcon'
 export { default as SearchIcon } from './SearchIcon'
 export { default as SelectorIcon } from './SelectorIcon'
+export { default as VideoCameraIcon } from './VideoCameraIcon'
+export { default as PencilAlt } from './PencilAlt'
+export { default as ChevronDownIcon } from './ChevronDown'
 
 export * from './props'

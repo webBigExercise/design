@@ -1,3 +1,3 @@
 export default function ChatBoard() {
-  return <div>Chartboard</div>
+  return <div className="absolute z-0 md:relative">Chartboard</div>
 }
